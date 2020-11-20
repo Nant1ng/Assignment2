@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlämningsuppgift 2</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="budget-header">
+            <div class="saldo">
+                <div class="title">
+                    Saldo
+                </div>
+                <div class="value">
+                     0 $ 
+                </div>
+            </div>
+            <div class="konto">
+                <div class="inkomst">
+                    <div class="title">
+                        Inkomst
+                    </div>
+                    <div class="total-inkomst">
+                        0 $
+                    </div>
+                </div>
+                <div class="chart">
+                    <div class="kostnad">
+                        <div class="title">
+                            Kostnad
+                        </div>
+                        <div class="total-kostnad">
+                             0 $
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="dashboard">
+            <div class="dashboard-title"></div>
+            <div class="toggle">
+                <div class="tab1">Inkomst</div>
+                <div class="tab2">Kostnad</div>
+                <div class="tab3 active">Allt</div>
+            </div>
+            <div class="hide" id="inkomst">
+                <ul class="list"></ul>
+                <div class="input">
+                    <input type="text" id="inkomst-title-input" name="title" placeholder="Title">
+                    <input type="number" id="inkomst-belopp-input" name="belopp" placeholder="0 $">
+                    <div class="add-inkomst"><img src="icon/plus.png"></div>
+                </div>
+            </div>
+            <div class="hide" id="kostnad">
+                <ul class="list"></ul>
+                <div class="input">
+                    <input type="text" id="kostnad-title-input" name="title" placeholder="Title">
+                    <input type="number" id="kostnad-belopp-input" name="belopp" placeholder="0 $">
+                    <div class="add-kostnad"><img src="icon/plus.png"></div>
+                </div>
+            </div>
+            <div class="hide" id="all">
+                <ul class="list"></ul>
+            </div>
+        </div>
+    </div>
+   
+      <script src="main.js"></script>
+</body>
+</html>
