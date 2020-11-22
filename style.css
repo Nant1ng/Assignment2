@@ -20,13 +20,323 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-color: whitesmoke;
 } 
 .budget-header{
-    height: 250px;
+    height: 284px;
+
 }
 .saldo{
     text-align: center;
     font-size: 2vw;
     line-height: 1.5em;
+    position: absolute;
+    top: 10%;
+    right: 47%;
+}
+.konto .inkomst{
+    text-align: center;
+    font-size: 2vw;
+    line-height: 1.5em;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+.konto .kostnad{
+    text-align: center;
+    font-size: 2vw;
+    line-height: 1.5em;
+    position: absolute;
+    top: 20%;
+    left: 20%;
 }
 .konto .total-kostnad{
     color: red;
+}
+
+/* Dashboard */
+.dashboard{
+    display: block;
+    width: 100%;
+    height: 470px;
+    background-color: #FFF;
+    border-radius: 30px 30px 0 0;
+}
+
+.dashboard .dashboard-title{
+    display: inline-block;
+    color: #1a0034;
+    font-size: 5px;
+    margin-left: 20px;
+    margin-top: 1%;
+}
+
+.toggle{
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.toggle .tab1, .tab2, .tab3{
+    display: inline-block; 
+    cursor: pointer;
+    font-size: 2vw;
+    color: #1a0034;
+    opacity: 0.4;
+}
+
+.toggle .tab2, .tab3{
+    margin-left: 20px;
+}
+
+.active{
+    opacity : 1 !important;
+}
+
+.hide{
+    display: none;
+}
+
+/* All */
+.dashboard #all{
+    width: 100%;
+    height: 339px;
+    position: relative;
+}
+.dashboard #all ul{
+    width: 100%;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+
+.dashboard #all ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+
+.dashboard #all ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.dashboard #all ul.list li .entry{
+    width:250px;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+}
+
+
+.dashboard #all ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    left: 30%;
+    cursor: pointer;
+    background-image: url('icon/trash.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.dashboard #all ul.list li.kostnad{
+    color: red;
+}
+
+/* Kostnad */
+.dashboard #kostnad{
+    width: 100%;
+    height: 339px;
+    position: relative;
+}
+
+.dashboard #kostnad .input{
+    position: absolute;
+    
+    display: block;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid black;
+}
+
+.dashboard #kostnad .input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dashboard #kostnad .input input#kostnad-title-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;margin: 5px;
+    margin-left: 10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+.dashboard #kostnad .input input#kostnad-belopp-input{
+    height: 40px;
+    width : 110px;
+    padding-left: 10px;
+    font-size: 1.2em;margin: 5px;
+    margin-left: -10px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.dashboard #kostnad .input .add-kostnad img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.dashboard #kostnad ul{
+    width: 360px;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+
+.dashboard #kostnad ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+
+.dashboard #kostnad ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.dashboard #kostnad ul.list li .entry{
+    width:250px;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    color: red;
+}
+
+.dashboard #kostnad ul.list li #edit{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    left: 58%;
+    cursor: pointer;
+    background-image: url("icon/edit.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.dashboard #kostnad ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 30%;
+    cursor: pointer;
+    background-image: url('icon/trash.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+/* Inkomst */
+.dashboard #inkomst{
+    width: 100%;
+    height: 339px;
+    position: relative;
+}
+
+.dashboard #inkomst .input{
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid black;
+}
+
+.dashboard #inkomst .input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dashboard #inkomst .input input#inkomst-title-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;margin: 5px;
+    margin-left: 10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+.dashboard #inkomst .input input#inkomst-belopp-input{
+    height: 40px;
+    width : 110px;
+    padding-left: 10px;
+    font-size: 1.2em;margin: 5px;
+    margin-left: -10px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.dashboard #inkomst .input .add-inkomst img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.dashboard #inkomst ul{
+    width: 360px;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+
+.dashboard #inkomst ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+
+.dashboard #inkomst ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.dashboard #inkomst ul.list li .entry{
+    width:250px;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+}
+
+.dashboard #inkomst ul.list li #edit{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    left: 58%;
+    cursor: pointer;
+    background-image: url("icon/edit.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.dashboard #inkomst ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 30%;
+    cursor: pointer;
+    background-image: url('icon/trash.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
 }

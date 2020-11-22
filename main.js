@@ -95,7 +95,7 @@ function deleteEntry(entry){
 }
 function editEntry(entry){
     let ENTRY = LIST[entry.id];
-    if(entry.type == "inkomst"){
+    if(ENTRY.type == "inkomst"){
         inkomstBelopp.value = ENTRY.belopp;
         inkomstTitle.value = ENTRY.title;
     }else if(ENTRY.type == "kostnad"){
@@ -116,7 +116,7 @@ function updateUI(){
     //Uppdatera UI 
     saldoEl.innerHTML = `${tecken}${saldo}$`;
     totalInkomstEl.innerHTML = `${inkomst}$`;
-    totalKostnadEl.innerHTML = `${kostnad}$`;
+    totalKostnadEl.innerHTML = `-${kostnad}$`;
 
     clearElement([inkomstList, kostnadList, allList]);
 
