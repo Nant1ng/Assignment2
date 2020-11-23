@@ -1,0 +1,22 @@
+{
+  "name": "inlamningsuppgiftva",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node-sass scss/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nant1ng/Assignment2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nant1ng/Assignment2/issues"
+  },
+  "homepage": "https://github.com/Nant1ng/Assignment2#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
